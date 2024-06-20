@@ -49,8 +49,7 @@
       inputs[i].addEventListener('keyup', updateSignature);
     }
 
-	checkOfficePhone.checked = true;
-	checkPhone.checked = true;
+	checkOfficePhone.click();
 	
 	checkOfficePhone.addEventListener('click', function () {
       if (!this.checked) {
