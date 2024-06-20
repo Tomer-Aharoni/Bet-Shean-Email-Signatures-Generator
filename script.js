@@ -58,8 +58,6 @@
         addHtmlNodes(officePhoneWrap, '04-0000000', 'officePhone');
       }
     });
-
-	checkOfficePhone.click();
 	
     checkPhone.addEventListener('click', function () {
       if (!this.checked) {
@@ -70,7 +68,6 @@
         addHtmlNodes(phoneWrap, '050-0000000', 'phone');
       }
     });
-	checkPhone.click();
 	
     checkSkype.addEventListener('click', function () {
       if (!this.checked) {
