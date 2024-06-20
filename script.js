@@ -48,9 +48,25 @@
     for (var i = inputs.length - 1; i >= 0; i--) {
       inputs[i].addEventListener('keyup', updateSignature);
     }
+    checkOfficePhone(function () {
+      if (!this.checked) {
+        officePhoneInput.disabled = true;
+        removeHtmlNodes(officePhoneWrap);
+      } else {
+        officePhoneInput.disabled = false;
+        addHtmlNodes(officePhoneWrap, '04-0000000', 'officePhone');
+      }
+    });
+    checkPhone(function () {
+      if (!this.checked) {
+        phoneInput.disabled = true;
+        removeHtmlNodes(phoneWrap);
+      } else {
+        phoneInput.disabled = false;
+        addHtmlNodes(phoneWrap, '050-0000000', 'phone');
+      }
+    });
 
-	addHtmlNodes(officePhoneWrap, '04-0000000', 'officePhone');
-	addHtmlNodes(phoneWrap, '050-0000000', 'phone');
 	
 	checkOfficePhone.addEventListener('click', function () {
       if (!this.checked) {
