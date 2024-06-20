@@ -49,6 +49,9 @@
       inputs[i].addEventListener('keyup', updateSignature);
     }
 
+	addHtmlNodes(officePhoneWrap, '04-0000000', 'officePhone');
+	addHtmlNodes(phoneWrap, '050-0000000', 'phone');
+	
 	checkOfficePhone.addEventListener('click', function () {
       if (!this.checked) {
         officePhoneInput.disabled = true;
