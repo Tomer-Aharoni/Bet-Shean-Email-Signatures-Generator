@@ -69,10 +69,9 @@
         phoneInput.disabled = false;
         addHtmlNodes(phoneWrap, '050-0000000', 'phone');
       }
-
-	    checkPhone.click();
-	    
     });
+	checkPhone.click();
+	
     checkSkype.addEventListener('click', function () {
       if (!this.checked) {
         skypeInput.disabled = true;
