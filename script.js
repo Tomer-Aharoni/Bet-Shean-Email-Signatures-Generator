@@ -48,8 +48,6 @@
     for (var i = inputs.length - 1; i >= 0; i--) {
       inputs[i].addEventListener('keyup', updateSignature);
     }
-
-	checkOfficePhone.click();
 	
 	checkOfficePhone.addEventListener('click', function () {
       if (!this.checked) {
@@ -60,6 +58,9 @@
         addHtmlNodes(officePhoneWrap, '04-0000000', 'officePhone');
       }
     });
+
+	checkOfficePhone.click();
+	
     checkPhone.addEventListener('click', function () {
       if (!this.checked) {
         phoneInput.disabled = true;
@@ -68,6 +69,9 @@
         phoneInput.disabled = false;
         addHtmlNodes(phoneWrap, '050-0000000', 'phone');
       }
+
+	    checkPhone.click();
+	    
     });
     checkSkype.addEventListener('click', function () {
       if (!this.checked) {
