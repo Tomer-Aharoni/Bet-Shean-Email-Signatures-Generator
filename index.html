@@ -157,7 +157,7 @@
               
               <div class="card is-primary mb-5">
                 <div class="card-body" id="signature_container">
-                  <table cellspacing="0" cellpadding="0" id="signature" style="direction: rtl;float:right;border-style:none;">
+                  <table cellspacing="0" cellpadding="0" id="signature" style="direction: rtl; float:right; border-width:0; border-style:none;">
                     <tbody>
                       <tr>
 			<td style="padding-right:10px; color:rgb(85, 85, 85);" colspan="2">
@@ -198,28 +198,13 @@
               <div class="mb-5">
                 <h1 class="display-6">עכשיו אפשר להעתיק!</h1>
                 <div class="controls">
-				 <!-- <button class="btn btn-primary" onclick="copyToClip(document.getElementById('signature').innerHTML)" data-select data-signature="signature"> -->
-					  <button class="btn btn-primary" onclick="CopyToClipboard('signature')"  data-select data-signature="signature">
-
-                    שנלך על זה?
-                  </button>
+			<button class="btn btn-primary" onclick="CopyToClipboard('signature')"  data-select data-signature="signature">	
+	                    שנלך על זה?
+                  	</button>
                 </div>
               </div>
 
 		<script>	  
-			function copyToClip(str) {
-			  function listener(e) {
-				e.clipboardData.setData("text/html", str);
-				
-				e.preventDefault();
-			  }
-			  document.addEventListener("copy", listener);
-			  document.execCommand("copy");
-			  document.removeEventListener("copy", listener);
-			};
-
-
-
 			function CopyToClipboard(element) {
 			
 			        var doc = document
