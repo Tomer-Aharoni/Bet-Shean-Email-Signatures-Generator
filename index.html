@@ -198,7 +198,9 @@
               <div class="mb-5">
                 <h1 class="display-6">עכשיו אפשר להעתיק!</h1>
                 <div class="controls">
-				  <button class="btn btn-primary" onclick="copyToClip(document.getElementById('signature').innerHTML)" data-select data-signature="signature">
+				 <!-- <button class="btn btn-primary" onclick="copyToClip(document.getElementById('signature').innerHTML)" data-select data-signature="signature"> -->
+					  <button class="btn btn-primary" onclick="CopyToClipboard('text')"  data-select data-signature="signature">
+
                     שנלך על זה?
                   </button>
                 </div>
@@ -215,6 +217,34 @@
 			  document.execCommand("copy");
 			  document.removeEventListener("copy", listener);
 			};
+
+
+
+			function CopyToClipboard(element) {
+			
+			        var doc = document
+			        , text = doc.getElementById(element)
+			        , range, selection;
+			    
+			    if (doc.body.createTextRange)
+			    {
+			        range = doc.body.createTextRange();
+			        range.moveToElementText(text);
+			        range.select();
+			    } 
+			    
+			    else if (window.getSelection)
+			    {
+			        selection = window.getSelection();        
+			        range = doc.createRange();
+			        range.selectNodeContents(text);
+			        selection.removeAllRanges();
+			        selection.addRange(range);
+			    }
+			    document.execCommand('copy');
+			    window.getSelection().removeAllRanges();
+			    document.getElementById("btn").value="Copied";
+			}
 		</script>
             </div>
 		<div>
